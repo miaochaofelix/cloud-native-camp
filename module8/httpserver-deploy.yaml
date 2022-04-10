@@ -20,4 +20,3 @@ spec:
               memory: 200Mi
             requests:
               memory: 100Mi
-      qosClass: Burstable
