@@ -49,3 +49,10 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "echo postStart hook > /usr/share/http-server-msg"]
+            preStop:
+              exec:
+                command: ["/httpserver", "-s", "quit"]
